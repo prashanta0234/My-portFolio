@@ -95,7 +95,7 @@ const About = () => {
           </Box>
           <Box sx={{ mt: 8 }}>
             <Grid container spacing={2}>
-              <Grid item xs={6}>
+              <Grid item xs={10}>
                 <Typography>
                   <strong>Education </strong> <br /> B.sc in CSE in
                 </Typography>{" "}
@@ -104,7 +104,7 @@ const About = () => {
                   Bangladesh University of Business and Technology
                 </Typography>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={10}>
                 <Box>
                   <Typography>
                     <LocalPhoneIcon /> 01754540234{" "}

@@ -1,5 +1,5 @@
-import { Button, Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Button, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, useTheme } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -12,6 +12,8 @@ import img from "../../image/my.jpg";
 import "./ShowHome.css";
 
 const ShowHome = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div className="home">
       <Grid container spacing={2} sx={{ alignItems: "center" }}>
@@ -20,9 +22,16 @@ const ShowHome = () => {
         </Grid>
         <Grid item xs={10} md={6}>
           <Box>
-            <Typography variant="h2" sx={{ color: "#2ED8FE" }}>
-              - I`M PRASHANTA CHAKRABORTY
-            </Typography>
+            {isMobile ? (
+              <Typography variant="h5" sx={{ color: "#2ED8FE" }}>
+                - I`M PRASHANTA CHAKRABORTY
+              </Typography>
+            ) : (
+              <Typography variant="h2" sx={{ color: "#2ED8FE" }}>
+                - I`M PRASHANTA CHAKRABORTY
+              </Typography>
+            )}
+
             <Typography sx={{ color: "white" }}>
               I am a Front-end, React developer. I focused on clean and
               user-friendly website.

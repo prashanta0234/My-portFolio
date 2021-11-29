@@ -35,16 +35,16 @@ const Contact = () => {
     <div>
       <Box sx={{ minHeight: "100vh", mt: 5 }}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h3">Feel free to contact with me</Typography>
+          <Grid item xs={10} md={6}>
+            <Typography variant="h4">Feel free to contact with me</Typography>
             <Box sx={{ mt: 5 }}>
-              <Typography variant="h5">
+              <Typography variant="h6">
                 <LocalPhoneIcon /> 01754540234{" "}
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h6">
                 <EmailIcon /> prashanta0234@gmail.com
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h6">
                 <HomeWorkIcon /> Chandpur, Bangladesh
               </Typography>
             </Box>

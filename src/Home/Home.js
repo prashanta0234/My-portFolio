@@ -158,7 +158,7 @@ const Home = (props) => {
                 </a>
 
                 <a href={resume} download="React_dev_Prashanta_Resume.pdf">
-                  <Button>DOWNLOAD CV</Button>
+                  <Button sx={{ mb: 2 }}>DOWNLOAD RESUME</Button>
                 </a>
               </Box>
             </Container>
