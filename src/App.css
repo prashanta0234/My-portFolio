@@ -3,6 +3,11 @@ a {
   color: white;
   cursor: pointer;
 }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
 button {
   cursor: pointer;
 }

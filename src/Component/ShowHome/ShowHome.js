@@ -23,16 +23,16 @@ const ShowHome = () => {
         <Grid item xs={10} md={6}>
           <Box>
             {isMobile ? (
-              <Typography variant="h5" sx={{ color: "#2ED8FE" }}>
-                - I`M PRASHANTA CHAKRABORTY
+              <Typography sx={{ color: "#2ED8FE", fontSize: "2em" }}>
+                - I`M PRASHANTA
               </Typography>
             ) : (
               <Typography variant="h2" sx={{ color: "#2ED8FE" }}>
-                - I`M PRASHANTA CHAKRABORTY
+                - I`M PRASHANTA
               </Typography>
             )}
 
-            <Typography sx={{ color: "white" }}>
+            <Typography sx={{ color: "white", mt: 2 }}>
               I am a Front-end, React developer. I focused on clean and
               user-friendly website.
             </Typography>

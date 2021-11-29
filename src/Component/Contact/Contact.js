@@ -1,6 +1,10 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/system";
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
+import { useForm } from "react-hook-form";
+import Alert from "@mui/material/Alert";
+
+import "./Contact.css";
 
 import emailjs from "emailjs-com";
 
@@ -9,22 +13,23 @@ import EmailIcon from "@mui/icons-material/Email";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 
 const Contact = () => {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-
+  const { register, handleSubmit, reset } = useForm();
+  // const onSubmit = (data) => console.log(data);
+  const [success, setsuccess] = useState(false);
+  const onSubmit = (e) => {
+    console.log(e);
     emailjs
-      .sendForm(
+      .send(
         "service_6jx37qe",
         "template_e2vlrmh",
-        form.current,
+        e,
         "user_kOifPw4vGKBXLR6Skivyt"
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Send SuccessFully!");
-          form.current = "";
+          setsuccess(true);
+          reset();
         },
         (error) => {
           console.log(error.text);
@@ -32,9 +37,9 @@ const Contact = () => {
       );
   };
   return (
-    <div>
+    <div className="contact">
       <Box sx={{ minHeight: "100vh", mt: 5 }}>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ justifyContent: "normal" }}>
           <Grid item xs={10} md={6}>
             <Typography variant="h4">Feel free to contact with me</Typography>
             <Box sx={{ mt: 5 }}>
@@ -62,58 +67,52 @@ const Contact = () => {
             <Box
               sx={{
                 width: "100%",
-                bgcolor: "white",
+                border: "2px solid #29C9F8",
+
                 p: 5,
                 borderRadius: 2,
                 textAlign: "center",
               }}
-              component="form"
-              onSubmit={sendEmail}
-              ref={form}
             >
               <Typography
                 variant="h5"
-                sx={{ fontWeight: 800, py: 2, color: "#007DFF" }}
+                sx={{ color: "#29C9F8", fontWeight: 700 }}
               >
-                {" "}
-                Concat Us
+                Contact Me{" "}
               </Typography>
-              <TextField
-                id="outlined-basic"
-                label="Your Name"
-                variant="outlined"
-                name="name"
-                fullWidth
-                sx={{ m: 1 }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Your Email"
-                variant="outlined"
-                name="user_email"
-                type="email"
-                fullWidth
-                sx={{ m: 1 }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Write message"
-                variant="outlined"
-                name="message"
-                type="text"
-                fullWidth
-                multiline
-                rows={4}
-                sx={{ m: 1 }}
-              />
-              <Button
-                variant="contained"
-                sx={{ bgcolor: "#29c9f8", width: "100%", m: 1 }}
-                type="submit"
-              >
-                {" "}
-                SEND
-              </Button>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input placeholder="Enter Your Name" {...register("name")} />
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  {...register("email", { required: true })}
+                />
+                <input
+                  placeholder="Enter Your Project Name"
+                  {...register("project", { required: true })}
+                />
+                <textarea
+                  {...register("message", { required: true })}
+                  placeholder="Write your Project  Details"
+                />
+                <Button
+                  type="submit"
+                  sx={{
+                    bgcolor: "#29C9F8",
+                    color: "white",
+                    width: "100%",
+                    mt: 2,
+                  }}
+                >
+                  {" "}
+                  Send
+                </Button>
+                {success && (
+                  <Alert variant="outlined" severity="info" sx={{ mt: 2 }}>
+                    Sending Successfull!!
+                  </Alert>
+                )}
+              </form>
             </Box>
           </Grid>
         </Grid>

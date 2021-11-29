@@ -1,11 +1,11 @@
 a {
-  margin: 7px;
+  margin-left: 7px;
 }
 .top-header button {
   background-color: #29c9f8;
   color: white;
-  margin-left: 10px;
-  margin-right: 7px;
+  margin-left: 7px;
+  /* margin-right: 7px;  */
 }
 .top-header button:hover {
   background-color: tomato;

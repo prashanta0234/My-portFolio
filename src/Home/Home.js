@@ -13,12 +13,13 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 // import Typography from "@mui/material/Typography";
 import { Button, Container } from "@mui/material";
 
 // Icons
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
@@ -38,6 +39,7 @@ import ShowHome from "../Component/ShowHome/ShowHome";
 import About from "../Component/About/About";
 import Projects from "../Component/Projects/Projects";
 import Contact from "../Component/Contact/Contact";
+import ProjectDetails from "../Component/Projects/ProjectDetails";
 
 const drawerWidth = 300;
 
@@ -127,14 +129,16 @@ const Home = (props) => {
               edge="end"
               onClick={handleDrawerToggle}
               sx={{
-                mr: 2,
+                mr: 1,
                 display: { sm: "none" },
               }}
             >
-              <MenuIcon />
+              <MenuOpenIcon
+                sx={{ width: "40px", height: "40px", color: "#29C9F8" }}
+              />
             </IconButton>
             <Container>
-              <Box sx={{ color: "white" }} className="top-header">
+              <Box sx={{ color: "white", mt: 2 }} className="top-header">
                 <a
                   target="_blank"
                   href="https://www.facebook.com/prashanta.chakraborty.14/"
@@ -158,7 +162,7 @@ const Home = (props) => {
                 </a>
 
                 <a href={resume} download="React_dev_Prashanta_Resume.pdf">
-                  <Button sx={{ mb: 2 }}>DOWNLOAD RESUME</Button>
+                  <Button sx={{ mb: 2 }}>RESUME</Button>
                 </a>
               </Box>
             </Container>
@@ -231,6 +235,10 @@ const Home = (props) => {
             <Route path="/home/contact">
               <Contact />
             </Route>
+            <Route path="/home/:id">
+              <ProjectDetails />
+            </Route>
+
             <Route exact path="/">
               <ShowHome />
             </Route>

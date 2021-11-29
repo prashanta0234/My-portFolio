@@ -1,38 +1,56 @@
 [
   {
+    "id": "1",
     "name": "Gn Resturent",
     "des": "React, MUI,Firebase",
     "img": "https://i.ibb.co/0hmp7jM/resturent.png",
-    "live": "#"
+    "live": "#",
+    "clint": "https://github.com/prashanta0234/Gn-resturent.git",
+    "server": "#"
   },
   {
+    "id": "2",
     "name": "Gn Bike",
     "des": "React, MUI,Firebase,Node,MongoDB,",
     "img": "https://i.ibb.co/HPhXDRz/gnBike.png",
-    "live": "https://gn-bike.web.app/home"
+    "live": "https://gn-bike.web.app/home",
+    "clint": "https://github.com/prashanta0234/gn-bikes-clintSide.git",
+    "server": "https://github.com/prashanta0234/gn_bike-serverSide.git"
   },
   {
+    "id": "3",
     "name": "Portfolio",
     "des": "React, MUI,Node,MongoDB,",
     "img": "https://i.ibb.co/JHd128Y/Myfolio.png",
-    "live": "#"
+    "live": "#",
+    "clint": "https://github.com/prashanta0234/My-portFolio.git",
+    "server": "#"
   },
   {
+    "id": "4",
     "name": "Gn shiping",
     "des": "React, MUI,Node,MongoDB,",
     "img": "https://i.ibb.co/PFqBbMp/shiping.png",
-    "live": "https://gn-shiping.web.app/home"
+    "live": "https://gn-shiping.web.app/home",
+    "clint": "https://github.com/prashanta0234/gn-shiping.git",
+    "server": "https://github.com/prashanta0234/gn_shiping-backend.git"
   },
   {
+    "id": "5",
     "name": "Gn Hospital",
     "des": "React, React-bootstrap",
     "img": "https://i.ibb.co/VMPfqZ7/gn-Hospital.png",
-    "live": "https://doctor-portal-f6478.web.app/"
+    "live": "https://doctor-portal-f6478.web.app/",
+    "clint": "https://github.com/prashanta0234/gn-hospital.git",
+    "server": "#"
   },
   {
+    "id": "6",
     "name": "BUBT Chorme extension",
     "des": "Html,Css",
     "img": "https://i.ibb.co/qpc9yGK/Chorme.png",
-    "live": "https://github.com/prashanta0234/Bubt-ChormeExtantion.git"
+    "live": "https://github.com/prashanta0234/Bubt-ChormeExtantion.git",
+    "clint": "https://github.com/prashanta0234/Bubt-ChormeExtantion.git",
+    "server": "#"
   }
 ]
