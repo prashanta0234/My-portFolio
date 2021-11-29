@@ -1,0 +1,8 @@
+.home img {
+  border-radius: 10px;
+  margin: 40px;
+}
+.home button:hover {
+  background-color: rgb(222, 246, 81);
+  color: rgb(0, 0, 0);
+}

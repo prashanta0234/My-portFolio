@@ -1,0 +1,8 @@
+.about button:hover {
+  background-color: tomato;
+  color: white;
+}
+.about img {
+  background-color: white;
+  border-radius: 4px;
+}

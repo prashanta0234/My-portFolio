@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Gn Resturent",
+    "des": "React, MUI,Firebase",
+    "img": "https://i.ibb.co/0hmp7jM/resturent.png",
+    "live": "#"
+  },
+  {
+    "name": "Gn Bike",
+    "des": "React, MUI,Firebase,Node,MongoDB,",
+    "img": "https://i.ibb.co/HPhXDRz/gnBike.png",
+    "live": "https://gn-bike.web.app/home"
+  },
+  {
+    "name": "Portfolio",
+    "des": "React, MUI,Node,MongoDB,",
+    "img": "https://i.ibb.co/JHd128Y/Myfolio.png",
+    "live": "#"
+  },
+  {
+    "name": "Gn shiping",
+    "des": "React, MUI,Node,MongoDB,",
+    "img": "https://i.ibb.co/PFqBbMp/shiping.png",
+    "live": "https://gn-shiping.web.app/home"
+  },
+  {
+    "name": "Gn Hospital",
+    "des": "React, React-bootstrap",
+    "img": "https://i.ibb.co/VMPfqZ7/gn-Hospital.png",
+    "live": "https://doctor-portal-f6478.web.app/"
+  },
+  {
+    "name": "BUBT Chorme extension",
+    "des": "Html,Css",
+    "img": "https://i.ibb.co/qpc9yGK/Chorme.png",
+    "live": "https://github.com/prashanta0234/Bubt-ChormeExtantion.git"
+  }
+]
