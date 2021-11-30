@@ -41,19 +41,19 @@ Progress.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic() {
+export default function CircularStatic({ value }) {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress >= 90 ? 90 : prevProgress + 30
+        prevProgress >= value ? value : prevProgress + 30
       );
     }, 500);
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [value]);
 
   return <Progress value={progress} />;
 }

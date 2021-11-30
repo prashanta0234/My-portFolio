@@ -7,16 +7,13 @@ import {
 } from "@mui/material";
 import React from "react";
 
-// import Progress from "../Progress/Progress";
-import Html from "../Progress/Html";
-import Css from "../Progress/Css";
-import Javascript from "../Progress/Javascript";
-import Reactp from "../Progress/Reactp";
-import Firebase from "../Progress/Firebase";
+import Progress from "../Progress/Progress";
+
 import { Box, useTheme } from "@mui/system";
 
 import resume from "../../resume/React_dev_Prashanta_Resume.pdf";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./About.css";
 
 // image
@@ -33,6 +30,7 @@ import frelancer from "../../image/freelancer.png";
 import fiveer from "../../image/fiveer.png";
 
 const About = () => {
+  AOS.init();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
@@ -46,89 +44,96 @@ const About = () => {
             <img src={my2} alt="" width="100%" />
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box sx={{ mt: 2 }}>
-              <Typography variant="h4" sx={{ color: "#2ED8FE" }}>
-                Prashanta Chakraborty
-              </Typography>
-              <Typography sx={{ mt: 2 }}>
-                I am a front-end React developer. I know Html, CSS. Javascript,
-                Node.js, MongoDB, express.js, firebase, MUI, bootstrap and so
-                many
-              </Typography>
-              <a href={resume} download="React_dev_Prashanta_Resume.pdf">
-                <Button
-                  sx={{
-                    backgroundColor: "#29c9f8",
-                    color: "white",
-                    mt: 5,
-                    py: 2,
-                    px: 4,
-                    cursor: "pointer",
-                  }}
-                >
-                  DOWNLOAD CV
-                </Button>
-              </a>
-            </Box>
-            <Box sx={{ mt: 5 }}>
-              <Typography variant="h6">
-                <a
-                  target="_blank"
-                  href="https://www.facebook.com/prashanta.chakraborty.14/"
-                  title="facebook"
-                >
-                  <FacebookIcon />
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+              <Box sx={{ mt: 2 }}>
+                <Typography variant="h4" sx={{ color: "#2ED8FE" }}>
+                  Prashanta Chakraborty
+                </Typography>
+                <Typography sx={{ mt: 2, fontFamilly: "Recursive" }}>
+                  I am a front-end React developer. I know Html, CSS.
+                  Javascript, Node.js, MongoDB, express.js, firebase, MUI,
+                  bootstrap and so many
+                </Typography>
+                <a href={resume} download="React_dev_Prashanta_Resume.pdf">
+                  <Button
+                    sx={{
+                      backgroundColor: "#29c9f8",
+                      color: "white",
+                      mt: 5,
+                      py: 2,
+                      px: 4,
+                      cursor: "pointer",
+                    }}
+                  >
+                    DOWNLOAD CV
+                  </Button>
                 </a>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/prashanta-chakraborty-b653491aa/"
-                  title="linkedin"
-                >
-                  <LinkedInIcon />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://github.com/prashanta0234"
-                  title="github"
-                >
-                  <GitHubIcon />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.freelancer.com.bd/u/Prashanta0234"
-                  title="Freelancer"
-                >
-                  <img src={frelancer} width="24px" height="24px" alt="" />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.fiverr.com/prashanta53?up_rollout=true"
-                  title="Fiveer"
-                >
-                  <img src={fiveer} width="24px" height="24px" alt="" />
-                </a>
-              </Typography>
-            </Box>
+              </Box>
+              <Box sx={{ mt: 5 }}>
+                <Typography variant="h6">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/prashanta.chakraborty.14/"
+                    title="facebook"
+                    rel="noreferrer"
+                  >
+                    <FacebookIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/prashanta-chakraborty-b653491aa/"
+                    title="linkedin"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/prashanta0234"
+                    title="github"
+                    rel="noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.freelancer.com.bd/u/Prashanta0234"
+                    title="Freelancer"
+                    rel="noreferrer"
+                  >
+                    <img src={frelancer} width="24px" height="24px" alt="" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.fiverr.com/prashanta53?up_rollout=true"
+                    title="Fiveer"
+                    rel="noreferrer"
+                  >
+                    <img src={fiveer} width="24px" height="24px" alt="" />
+                  </a>
+                </Typography>
+              </Box>
+            </div>
             <Box sx={{ mt: 8 }}>
               <Grid container spacing={2}>
                 <Grid item xs={10} md={6}>
-                  <Typography>
+                  <Typography sx={{ fontFamily: "Recursive" }}>
                     <strong>Education </strong> <br /> B.sc in CSE in
                   </Typography>
 
-                  <Typography>
+                  <Typography sx={{ fontFamily: "Recursive" }}>
                     Bangladesh University of Business and Technology
                   </Typography>
                 </Grid>
                 <Grid item xs={10} md={6}>
                   <Box>
-                    <Typography>
+                    <Typography sx={{ fontFamily: "Recursive" }}>
                       <LocalPhoneIcon /> 01754540234{" "}
                     </Typography>
-                    <Typography>
+                    <Typography sx={{ fontFamily: "Recursive" }}>
                       <EmailIcon /> prashanta0234@gmail.com
                     </Typography>
-                    <Typography>
+                    <Typography sx={{ fontFamily: "Recursive" }}>
                       <HomeWorkIcon /> Chandpur, Bangladesh
                     </Typography>
                   </Box>
@@ -142,43 +147,72 @@ const About = () => {
                     </Typography>
                   </Box>
                 </Grid>
-
-                <Grid
-                  container
-                  spacing={2}
-                  sx={{ textAlign: "center", justifyContent: "center" }}
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-bottom"
                 >
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Html />
-                      <Typography variant="h6">Html</Typography>
-                    </Box>
+                  <Grid
+                    container
+                    spacing={2}
+                    sx={{ textAlign: "center", justifyContent: "center" }}
+                  >
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={80} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Html
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={80} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Css
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={70} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Javascript
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={70} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          React
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={60} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Firebase
+                        </Typography>
+                      </Box>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Css />
-                      <Typography variant="h6">Css</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Javascript />
-                      <Typography variant="h6">Javascript</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Reactp />
-                      <Typography variant="h6">React</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Firebase />
-                      <Typography variant="h6">Firebase</Typography>
-                    </Box>
-                  </Grid>
-                </Grid>
+                </div>
               </Grid>
             </Box>
           </Grid>
@@ -186,93 +220,101 @@ const About = () => {
       ) : (
         <Grid container spacing={2} sx={{ mt: 5 }}>
           <Grid item xs={12} md={6}>
-            <Box sx={{ mt: 2 }}>
-              <Typography variant="h4" sx={{ color: "#2ED8FE" }}>
-                Prashanta Chakraborty
-              </Typography>
-              <Typography sx={{ mt: 2 }}>
-                I am a front-end React developer. I know Html, CSS. Javascript,
-                Node.js, MongoDB, express.js, firebase, MUI, bootstrap and so
-                many
-              </Typography>
-              <a href={resume} download="React_dev_Prashanta_Resume.pdf">
-                <Button
-                  sx={{
-                    backgroundColor: "#29c9f8",
-                    color: "white",
-                    mt: 5,
-                    py: 2,
-                    px: 4,
-                    cursor: "pointer",
-                  }}
-                >
-                  DOWNLOAD CV
-                </Button>
-              </a>
-            </Box>
-            <Box sx={{ mt: 5 }}>
-              <Typography variant="h6">
-                <a
-                  target="_blank"
-                  href="https://www.facebook.com/prashanta.chakraborty.14/"
-                  title="facebook"
-                >
-                  <FacebookIcon />
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+              <Box sx={{ mt: 2 }}>
+                <Typography variant="h4" sx={{ color: "#2ED8FE" }}>
+                  Prashanta Chakraborty
+                </Typography>
+                <Typography sx={{ mt: 2, fontFamily: "Recursive" }}>
+                  I am a front-end React developer. I know Html, CSS.
+                  Javascript, Node.js, MongoDB, express.js, firebase, MUI,
+                  bootstrap and so many
+                </Typography>
+                <a href={resume} download="React_dev_Prashanta_Resume.pdf">
+                  <Button
+                    sx={{
+                      backgroundColor: "#29c9f8",
+                      color: "white",
+                      mt: 5,
+                      py: 2,
+                      px: 4,
+                      cursor: "pointer",
+                    }}
+                  >
+                    DOWNLOAD CV
+                  </Button>
                 </a>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/prashanta-chakraborty-b653491aa/"
-                  title="linkedin"
-                >
-                  <LinkedInIcon />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://github.com/prashanta0234"
-                  title="github"
-                >
-                  <GitHubIcon />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.freelancer.com.bd/u/Prashanta0234"
-                  title="Freelancer"
-                >
-                  <img src={frelancer} width="24px" height="24px" alt="" />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.fiverr.com/prashanta53?up_rollout=true"
-                  title="Fiveer"
-                >
-                  <img src={fiveer} width="24px" height="24px" alt="" />
-                </a>
-              </Typography>
-            </Box>
+              </Box>
+              <Box sx={{ mt: 5 }}>
+                <Typography variant="h6">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/prashanta.chakraborty.14/"
+                    title="facebook"
+                    rel="noreferrer"
+                  >
+                    <FacebookIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/prashanta-chakraborty-b653491aa/"
+                    title="linkedin"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/prashanta0234"
+                    title="github"
+                    rel="noreferrer"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.freelancer.com.bd/u/Prashanta0234"
+                    title="Freelancer"
+                    rel="noreferrer"
+                  >
+                    <img src={frelancer} width="24px" height="24px" alt="" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.fiverr.com/prashanta53?up_rollout=true"
+                    title="Fiveer"
+                    rel="noreferrer"
+                  >
+                    <img src={fiveer} width="24px" height="24px" alt="" />
+                  </a>
+                </Typography>
+              </Box>
+            </div>
             <Box sx={{ mt: 8 }}>
               <Grid container spacing={2}>
-                <Grid item xs={10} md={6}>
-                  <Typography>
+                <Grid item xs={10} md={5}>
+                  <Typography sx={{ fontFamily: "Recursive" }}>
                     <strong>Education </strong> <br /> B.sc in CSE in
                   </Typography>
 
-                  <Typography>
+                  <Typography sx={{ fontFamily: "Recursive" }}>
                     Bangladesh University of Business and Technology
                   </Typography>
                 </Grid>
-                <Grid item xs={10} md={6}>
+                <Grid item xs={10} md={7}>
                   <Box>
-                    <Typography>
+                    <Typography sx={{ fontFamily: "Recursive" }}>
                       <LocalPhoneIcon /> 01754540234{" "}
                     </Typography>
-                    <Typography>
+                    <Typography sx={{ fontFamily: "Recursive" }}>
                       <EmailIcon /> prashanta0234@gmail.com
                     </Typography>
-                    <Typography>
+                    <Typography sx={{ fontFamily: "cursive" }}>
                       <HomeWorkIcon /> Chandpur, Bangladesh
                     </Typography>
                   </Box>
                 </Grid>
+
                 <Grid item xs={10} md={12}>
                   <Box>
                     <Typography
@@ -282,43 +324,72 @@ const About = () => {
                     </Typography>
                   </Box>
                 </Grid>
-
-                <Grid
-                  container
-                  spacing={2}
-                  sx={{ textAlign: "center", justifyContent: "center" }}
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-bottom"
                 >
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Html />
-                      <Typography variant="h6">Html</Typography>
-                    </Box>
+                  <Grid
+                    container
+                    spacing={2}
+                    sx={{ textAlign: "center", justifyContent: "center" }}
+                  >
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={80} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Html
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={80} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Css
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={70} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Javascript
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={70} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          React
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <Box>
+                        <Progress value={60} />
+                        <Typography
+                          variant="h6"
+                          sx={{ fontFamily: "Recursive" }}
+                        >
+                          Firebase
+                        </Typography>
+                      </Box>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Css />
-                      <Typography variant="h6">Css</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Javascript />
-                      <Typography variant="h6">Javascript</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Reactp />
-                      <Typography variant="h6">React</Typography>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Box>
-                      <Firebase />
-                      <Typography variant="h6">Firebase</Typography>
-                    </Box>
-                  </Grid>
-                </Grid>
+                </div>
               </Grid>
             </Box>
           </Grid>
@@ -329,7 +400,9 @@ const About = () => {
             sx={{ mx: 2, bgcolor: "#2ED8FE" }}
           />
           <Grid item xs={12} md={5}>
-            <img src={my2} alt="" width="100%" />
+            <div data-aos="zoom-in-up">
+              <img src={my2} alt="" width="100%" />
+            </div>
           </Grid>
         </Grid>
       )}

@@ -42,22 +42,15 @@ import Contact from "../Component/Contact/Contact";
 import ProjectDetails from "../Component/Projects/ProjectDetails";
 
 const drawerWidth = 300;
-
-const Home = (props) => {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-  const drawer = (
+const DrawerContent = ({ drawerToggle }) => {
+  return (
     <Box sx={{ textAlign: "center", mt: 4 }}>
       <img src={logo} width="30%" alt="" />
       <List sx={{ mt: 5 }}>
         <ListItem
           button
           sx={{ height: "60px", justifyContent: "center" }}
-          onClick={handleDrawerToggle}
+          onClick={drawerToggle}
         >
           <Link to="/">
             <ListItemText>
@@ -70,7 +63,7 @@ const Home = (props) => {
         <ListItem
           button
           sx={{ height: "60px", justifyContent: "center" }}
-          onClick={handleDrawerToggle}
+          onClick={drawerToggle}
         >
           <Link to="/home/aboutme">
             <ListItemText>
@@ -82,7 +75,7 @@ const Home = (props) => {
         <ListItem
           button
           sx={{ height: "60px", justifyContent: "center" }}
-          onClick={handleDrawerToggle}
+          onClick={drawerToggle}
         >
           <Link to="/home/projects">
             <ListItemText>
@@ -93,7 +86,7 @@ const Home = (props) => {
         <ListItem
           button
           sx={{ height: "60px", justifyContent: "center" }}
-          onClick={handleDrawerToggle}
+          onClick={drawerToggle}
         >
           <Link to="/home/contact">
             <ListItemText>
@@ -104,6 +97,14 @@ const Home = (props) => {
       </List>
     </Box>
   );
+};
+const Home = (props) => {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -143,11 +144,13 @@ const Home = (props) => {
                   target="_blank"
                   href="https://www.facebook.com/prashanta.chakraborty.14/"
                   title="facebook"
+                  rel="noreferrer"
                 >
                   <FacebookIcon />
                 </a>
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://www.linkedin.com/in/prashanta-chakraborty-b653491aa/"
                   title="linkedin"
                 >
@@ -157,6 +160,7 @@ const Home = (props) => {
                   target="_blank"
                   href="https://github.com/prashanta0234"
                   title="github"
+                  rel="noreferrer"
                 >
                   <GitHubIcon />
                 </a>
@@ -192,7 +196,7 @@ const Home = (props) => {
               },
             }}
           >
-            {drawer}
+            <DrawerContent drawerToggle={handleDrawerToggle} />
           </Drawer>
           <Drawer
             variant="permanent"
@@ -207,7 +211,7 @@ const Home = (props) => {
             }}
             open
           >
-            {drawer}
+            <DrawerContent drawerToggle={() => {}} />
           </Drawer>
         </Box>
         <Box

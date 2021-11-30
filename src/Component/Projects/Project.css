@@ -10,7 +10,7 @@
   position: absolute;
   bottom: 0;
   margin-bottom: 5px;
-  height: 150px;
+  height: 100%;
   width: 100%;
   text-align: center;
   background-color: #00000061;
@@ -23,4 +23,8 @@
 
 .pro-img:hover .pro-hov {
   visibility: visible;
+}
+
+.mySwiper {
+  width: 30%;
 }

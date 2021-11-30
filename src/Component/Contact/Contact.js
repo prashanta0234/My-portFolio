@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box } from "@mui/system";
 import { Button, Grid, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
-import Alert from "@mui/material/Alert";
 
 import swal from "sweetalert";
 
@@ -16,8 +15,7 @@ import HomeWorkIcon from "@mui/icons-material/HomeWork";
 
 const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
-  // const onSubmit = (data) => console.log(data);
-  // const [success, setsuccess] = useState(false);
+
   const onSubmit = (e) => {
     console.log(e);
     emailjs
@@ -41,7 +39,11 @@ const Contact = () => {
   return (
     <div className="contact">
       <Box sx={{ minHeight: "100vh", mt: 5 }}>
-        <Grid container spacing={2} sx={{ justifyContent: "normal" }}>
+        <Grid
+          container
+          spacing={2}
+          sx={{ justifyContent: "normal", alignItems: "center" }}
+        >
           <Grid item xs={10} md={6}>
             <Typography variant="h4">Feel free to contact with me</Typography>
             <Box sx={{ mt: 5 }}>
