@@ -3,6 +3,8 @@ import { Box, useTheme } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Typewriter from "typewriter-effect";
+
 // import icon
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
@@ -24,11 +26,25 @@ const ShowHome = () => {
           <Box>
             {isMobile ? (
               <Typography sx={{ color: "#2ED8FE", fontSize: "2em" }}>
-                - I`M PRASHANTA
+                - I`M{" "}
+                <Typewriter
+                  options={{
+                    strings: [" PRASHANTA", "React dev"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </Typography>
             ) : (
               <Typography variant="h2" sx={{ color: "#2ED8FE" }}>
-                - I`M PRASHANTA
+                - I`M{" "}
+                <Typewriter
+                  options={{
+                    strings: [" PRASHANTA", "React dev"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </Typography>
             )}
 

@@ -4,6 +4,8 @@ import { Button, Grid, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import Alert from "@mui/material/Alert";
 
+import swal from "sweetalert";
+
 import "./Contact.css";
 
 import emailjs from "emailjs-com";
@@ -15,7 +17,7 @@ import HomeWorkIcon from "@mui/icons-material/HomeWork";
 const Contact = () => {
   const { register, handleSubmit, reset } = useForm();
   // const onSubmit = (data) => console.log(data);
-  const [success, setsuccess] = useState(false);
+  // const [success, setsuccess] = useState(false);
   const onSubmit = (e) => {
     console.log(e);
     emailjs
@@ -28,7 +30,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setsuccess(true);
+          swal("Good job!", "Sending Successful!", "success");
           reset();
         },
         (error) => {
@@ -107,11 +109,6 @@ const Contact = () => {
                   {" "}
                   Send
                 </Button>
-                {success && (
-                  <Alert variant="outlined" severity="info" sx={{ mt: 2 }}>
-                    Sending Successfull!!
-                  </Alert>
-                )}
               </form>
             </Box>
           </Grid>
