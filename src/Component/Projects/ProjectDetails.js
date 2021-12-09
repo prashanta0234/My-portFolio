@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Box } from "@mui/system";
-import { Grid, Container, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useParams } from "react-router";
-import { SwiperSlide, Swiper } from "swiper/react";
+
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.min.css";
 // import "swiper/css/pagination";

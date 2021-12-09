@@ -25,13 +25,7 @@ const ShowHome = () => {
     <div className="home">
       <Grid container spacing={2} sx={{ alignItems: "center" }}>
         <Grid item xs={10} md={6}>
-          <div
-            data-aos="fade-right"
-            data-aos-offset="400"
-            data-aos-easing="ease-in-sine"
-          >
-            <img src={img} width="80%" alt="" />
-          </div>
+          <img src={img} width="80%" alt="" />
         </Grid>
 
         <Grid item xs={10} md={6}>
